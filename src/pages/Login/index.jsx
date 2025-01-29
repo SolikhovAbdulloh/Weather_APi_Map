@@ -8,8 +8,8 @@ const Login = () => {
   const [Password, Setpassword] = useState("");
 
   const onFinish = (values) => {
-    if (Login === "1" && Password === "2") {
-      const user = {Login,Password};
+    if (Login === "havoyuli" && Password === "havo123yuli") {
+      const user = { Login, Password };
       localStorage.setItem("User", JSON.stringify(user));
       navigate("/map");
     } else {

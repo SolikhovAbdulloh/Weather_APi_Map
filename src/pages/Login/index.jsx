@@ -22,7 +22,7 @@ const Login = () => {
       className="flex items-center justify-center h-screen bg-cover bg-center"
       style={{ backgroundImage: "url('your-airplane-image-url.jpg')" }}
     >
-      <div className="bg-white bg-opacity-80 p-8 rounded-lg shadow-xl w-full max-w-md text-center">
+      <div className="bg-white bg-opacity-80 p-8 rounded-lg shadow-xl  max-w-md text-center">
         <h3 className="text-3xl font-semibold text-gray-800 mb-6">Login</h3>
         <Form
           className="space-y-4"
@@ -36,17 +36,17 @@ const Login = () => {
           onFinish={onFinish}
         >
           <Form.Item
-            label="Username"
-            name="username"
+            label="Login"
+            name="Login"
             rules={[
               {
                 required: true,
-                message: "Please input your username!",
+                message: "Please input your login!",
               },
             ]}
           >
             <Input
-              className="w-full p-3 text-lg border rounded-md"
+              className="w-full h-[40px] p-3 text-lg border rounded-md"
               onChange={(e) => SetLogin(e.target.value)}
             />
           </Form.Item>
@@ -62,7 +62,7 @@ const Login = () => {
             ]}
           >
             <Input.Password
-              className="w-full p-3 text-lg border rounded-md"
+              className="w-full h-[40px]  p-3 text-lg border rounded-md"
               onChange={(e) => Setpassword(e.target.value)}
             />
           </Form.Item>
@@ -73,7 +73,7 @@ const Login = () => {
               htmlType="submit"
               className="w-full py-3 text-lg bg-blue-500 text-white rounded-md hover:bg-blue-600"
             >
-              Submit
+              Login
             </Button>
           </Form.Item>
         </Form>

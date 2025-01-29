@@ -9,4 +9,8 @@
 }
 body{
   background-image: url('../public/wolfgang-hasselmann-bR_-gllg7Bs-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
 }

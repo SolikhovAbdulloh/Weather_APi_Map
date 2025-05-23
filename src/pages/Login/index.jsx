@@ -7,34 +7,24 @@ const Login = () => {
   const [Login, SetLogin] = useState("");
   const [Password, Setpassword] = useState("");
 
-  const onFinish = (values) => {
-    if (Login === "havoyuli" && Password === "havo123yuli") {
-      const user = { Login, Password };
-      localStorage.setItem("User", JSON.stringify(user));
-      navigate("/map");
-    } else {
-      alert("Noto'g'ri login yoki parol!");
-    }
+  const onFinish = () => {
+    // if (Login === "havoyuli" && Password === "havo123yuli") {
+    //   const user = { Login, Password };
+    // localStorage.setItem("User", JSON.stringify(user));
+    navigate("/map");
+    // } else {
+    //   alert("Noto'g'ri login yoki parol!");
+    // }
   };
 
   return (
     <div
       className="flex items-center justify-center h-screen bg-cover bg-center"
-      style={{ backgroundImage: "url('your-airplane-image-url.jpg')" }}
+      style={{ backgroundImage: `url('your-airplane-image-url.jpg')` }}
     >
       <div className="bg-white bg-opacity-80 p-8 rounded-lg shadow-xl  max-w-md text-center">
         <h3 className="text-3xl font-semibold text-gray-800 mb-6">Login</h3>
-        <Form
-          className="space-y-4"
-          name="basic"
-          labelCol={{
-            span: 8,
-          }}
-          wrapperCol={{
-            span: 16,
-          }}
-          onFinish={onFinish}
-        >
+        <Form className="space-y-4" name="basic" onFinish={onFinish}>
           <Form.Item
             label="Login"
             name="Login"

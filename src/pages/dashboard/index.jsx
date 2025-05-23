@@ -6,6 +6,7 @@ import { PiWind } from "react-icons/pi";
 import { WiCloudyWindy } from "react-icons/wi";
 import "leaflet/dist/leaflet.css";
 import axios from "axios";
+// --legacy-peer-deps majburiy versiyaga moslashtirish uchun kod
 import {
   cloudCoverageColors,
   countries,
@@ -23,7 +24,7 @@ const getColorByWeather = (value, type) => {
       : cloudCoverageColors;
 
   for (const range of colors) {
-    if (value >= range.range[0] && value < range.range[1]) {
+    if (value >= range.range[0] && value < range.range[1]){
       color = range.color;
       break;
     }
@@ -35,7 +36,6 @@ const Map = () => {
   const active = "bg-[#1890ff] text-[#fff]";
   const [weatherData, setWeatherData] = useState({});
   const [selectedWeatherType, setSelectedWeatherType] = useState("temperature");
-  const { Option } = Select;
   useEffect(() => {
     const fetchWeather = async () => {
       const data = {};
@@ -79,11 +79,8 @@ const Map = () => {
             <li key={index} style={{ color: range.color }}>
               {range.label}
               <span
-                className="flex items-center gap-1"
-                style={{
-                  backgroundColor: range.color,
-                  padding: "1px",
-                }}
+                className={`flex items-center gap-1  p-[1px]`}
+                style={{backgroundColor:range.color}}
               >
                 Color
               </span>
